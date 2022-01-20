@@ -62,11 +62,6 @@ class MultiLineSortAndJoinStream extends Readable {
                 minIndex = streamIndex
         }
 
-        let v = this._lines[minIndex][0]
-        if (v.toString() === 'NaN') {
-            console.log('NaN')
-        }
-
         this.push(this._lines[minIndex].shift() + EOL)
     }
 
